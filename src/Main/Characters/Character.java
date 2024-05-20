@@ -1,8 +1,5 @@
 package Main.Characters;
 
-import Main.Item;
-import Main.Main;
-
 public class Character {
     protected int health;
     protected int energy;

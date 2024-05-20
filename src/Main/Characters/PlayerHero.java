@@ -1,9 +1,9 @@
 package Main.Characters;
 
 import Main.Acts.FirstAct;
+import Main.GlobalFlags;
 import Main.Item;
-import Main.Main;
-import Main.ConsoleWindowManager;
+import Main.GameManager;
 
 import java.awt.event.KeyEvent;
 import java.util.*;
@@ -35,9 +35,14 @@ public class PlayerHero extends Character {
     private int expirience;
     private int level;
 
-    static ConsoleWindowManager window = ConsoleWindowManager.getInstance();
-
-
+    static GameManager window = GameManager.getInstance();
+    private static PlayerHero instance = null;
+    public static PlayerHero getInstance() {
+        if (instance == null) {
+            instance = new PlayerHero();
+        }
+        return instance;
+    }
 
     public PlayerHero() {
         this.health = 100;
@@ -214,7 +219,7 @@ public class PlayerHero extends Character {
 
         return (Comparator<String>) (s1, s2) -> {
             //порядок сортировки ключей
-            String[] keys = {"здоровье", "энергия", "деньги", "сила", "ловкость", "интеллект", "харизма", "мудрость", "выносливость", "репутация", "бесчестие", "уровень"};
+            String[] keys = new String[]{"здоровье", "запас сил", "деньги", "сила", "ловкость", "интеллект", "харизма", "мудрость", "выносливость", "репутация", "бесчестие", "уровень"};
 
             int firstIndex = -1;
             int secondIndex = -1;
@@ -232,23 +237,17 @@ public class PlayerHero extends Character {
         };
     }
 
-    public PlayerHero createMainHero() {
+    public void createMainHero() {
         FirstAct.showPrologue();
-
-        PlayerHero mainHero = new PlayerHero();
-
-        chooseBakcground(mainHero);
-
-        return mainHero;
+        chooseBakcground();
+        GlobalFlags.getInstance().inGame = true;
     }
 
-    private void chooseBakcground(PlayerHero mainHero) {
+    private void chooseBakcground() {
 
         window.clearConsole();
-        Main.printTopHUD();
-
         // Спрашиваем игрока о его прошлом
-        window.print(" ╔===========================================╗\n" +
+        window.printStrict(" ╔===========================================╗\n" +
                      " ║        Расскажи о своем прошлом           ║\n" +
                      " ╠===========================================╣\n" +
                      " ║ 1. Крестьянин из болгарской деревни       ║\n" +
@@ -260,72 +259,85 @@ public class PlayerHero extends Character {
                      " ╚===========================================╝\n");
 
 
-        int choice = window.getLastKeyEvent(false);
+        int choice = window.getLastKeyEvent(false,new int[]{KeyEvent.VK_1,KeyEvent.VK_2,KeyEvent.VK_3});
 
 
         switch (choice) {
             case KeyEvent.VK_1: // Крестьянская семья
-                mainHero.setHealth(120);
-                mainHero.setEnergy(130);
-                mainHero.setStrength(12);
-                mainHero.setAgility(10);
-                mainHero.setIntelligence(8);
-                mainHero.setCharisma(10);
-                mainHero.setWisdom(8);
-                mainHero.setEndurance(14);
-                mainHero.setReputation(-5);
-                mainHero.setInfamy(5);
-                mainHero.setStrengthMod(2);
-                mainHero.setEnduranceMod(4);
+                setHealth(120);
+                setEnergy(130);
+                setStrength(12);
+                setAgility(10);
+                setIntelligence(8);
+                setCharisma(10);
+                setWisdom(8);
+                setEndurance(14);
+                setReputation(-5);
+                setInfamy(5);
+                setStrengthMod(2);
+                setEnduranceMod(4);
                 break;
             case KeyEvent.VK_2: // Семья ремесленников
-                mainHero.setHealth(90);
-                mainHero.setEnergy(90);
-                mainHero.setStrength(8);
-                mainHero.setAgility(10);
-                mainHero.setIntelligence(12);
-                mainHero.setCharisma(14);
-                mainHero.setWisdom(10);
-                mainHero.setEndurance(8);
-                mainHero.setReputation(0);
-                mainHero.setInfamy(0);
-                mainHero.setCharismaMod(2);
-                mainHero.setIntelligenceMod(4);
+                setHealth(90);
+                setEnergy(90);
+                setStrength(8);
+                setAgility(10);
+                setIntelligence(12);
+                setCharisma(14);
+                setWisdom(10);
+                setEndurance(8);
+                setReputation(0);
+                setInfamy(0);
+                setCharismaMod(2);
+                setIntelligenceMod(4);
                 break;
             case KeyEvent.VK_3: // Дворянская семья
-                mainHero.setHealth(110);
-                mainHero.setEnergy(95);
-                mainHero.setStrength(12);
-                mainHero.setAgility(8);
-                mainHero.setIntelligence(10);
-                mainHero.setCharisma(12);
-                mainHero.setWisdom(12);
-                mainHero.setEndurance(8);
-                mainHero.setReputation(5);
-                mainHero.setInfamy(-5);
-                mainHero.setStrengthMod(2);
-                mainHero.setCharismaMod(2);
-                mainHero.setWisdomMod(2);
-                break;
-            default:
-                chooseBakcground(mainHero);
+                setHealth(110);
+                setEnergy(95);
+                setStrength(12);
+                setAgility(8);
+                setIntelligence(10);
+                setCharisma(12);
+                setWisdom(12);
+                setEndurance(8);
+                setReputation(5);
+                setInfamy(-5);
+                setStrengthMod(2);
+                setCharismaMod(2);
+                setWisdomMod(2);
                 break;
         }
 
     }
 
     public void printStats() {
-        window.print("Ваши  характеристики: \n");
+        window.printStrict("Ваши  характеристики: \n");
         int column_count = 0;
+        String[] visibleStats = new String[]{};
+        switch (GlobalFlags.getInstance().currentAct) {
+            case 1:
+                visibleStats = new String[]{"здоровье", "запас сил", "деньги", "репутация", "бесчестие", "уровень"};
+                break;
+            case 2:
+                visibleStats = new String[]{"здоровье", "запас сил", "деньги", "сила", "ловкость", "интеллект", "харизма", "мудрость", "выносливость", "репутация", "бесчестие", "уровень"};
+                break;
+        }
         TreeMap<String, Integer> stats = getStatsAsMap();
         for (Map.Entry<String, Integer> entry : stats.entrySet()) {
-            window.print(entry.getKey() + ": " + entry.getValue() + " | ");
-            column_count++;
-            if(column_count == 3){
-                window.print("\n");
-                column_count = 0;
+            if (Arrays.stream(visibleStats).anyMatch(x -> x == entry.getKey())) {
+                window.printStrict(String.format("%-17s", entry.getKey() + ": " + entry.getValue()) + " | ");
+                column_count++;
+                if(column_count == 3){
+                    window.printStrict("\n");
+                    column_count = 0;
+                }
             }
         }
-        window.print("\n");
+        window.printStrict("День №" + GlobalFlags.getInstance().currentDay + "\n" +
+                                "##########################################################\n");
+    }
+
+    public boolean checkDeath() {
+        return (health <= 0 || energy <= 0);
     }
 }

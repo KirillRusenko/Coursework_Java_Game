@@ -9,30 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3727353f-f293-4055-a249-bb3f5808e635" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Coursework_Java_Game_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Coursework_Java_Game.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/events/Events.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Acts/FirstAct.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Characters/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Characters/PlayerHero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/ConsoleWindowManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/GlobalFlags.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+    <list default="true" id="3727353f-f293-4055-a249-bb3f5808e635" name="Changes" comment="temp">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/apache_commons_lang3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coursework_Java_Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework_Java_Game.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Acts/FirstAct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Acts/FirstAct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Characters/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Characters/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Characters/PlayerHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Characters/PlayerHero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/ConsoleWindowManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/GlobalFlags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GlobalFlags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,6 +39,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="fdgdfgdf" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -56,6 +58,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ConsoleWindow.executor": "Run",
+    "Application.ConsoleWindowManager.executor": "Run",
+    "Application.GameManager.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.MainConsole.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
@@ -75,7 +79,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/User/IdeaProjects/Coursework_Java_Game/src/Main.java",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "configurable.group.appearance",
@@ -91,9 +95,9 @@
       <recent name="C:\Users\User\IdeaProjects\Coursework_Java_Game\src\Main\Resources\Events" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainConsole">
-    <configuration name="ConsoleWindowManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main.ConsoleWindowManager" />
+  <component name="RunManager" selected="Application.GameManager">
+    <configuration name="GameManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main.GameManager" />
       <module name="Coursework_Java_Game" />
       <extension name="coverage">
         <pattern>
@@ -120,7 +124,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainConsole" />
+        <item itemvalue="Application.GameManager" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ConsoleWindowManager" />
       </list>
     </recent_temporary>
@@ -153,8 +158,28 @@
       <workItem from="1715544110613" duration="3310000" />
       <workItem from="1715619595388" duration="2279000" />
       <workItem from="1716139606787" duration="14409000" />
-      <workItem from="1716228153440" duration="9392000" />
+      <workItem from="1716228153440" duration="11260000" />
+      <workItem from="1716367586854" duration="8000" />
+      <workItem from="1716368611837" duration="614000" />
+      <workItem from="1716398030674" duration="13196000" />
     </task>
+    <task id="LOCAL-00001" summary="0.1 Pre demo">
+      <option name="closed" value="true" />
+      <created>1716237898226</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716237898226</updated>
+    </task>
+    <task id="LOCAL-00002" summary="temp">
+      <option name="closed" value="true" />
+      <created>1716239451588</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716239451588</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,16 +196,41 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="0.1 Pre demo" />
+    <MESSAGE value="temp" />
+    <option name="LAST_COMMIT_MESSAGE" value="temp" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main/Main.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/Main/Acts/FirstAct.java</url>
+          <line>138</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/Acts/FirstAct.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/Acts/FirstAct.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/GameManager.java</url>
+          <line>303</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="mainHero" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
