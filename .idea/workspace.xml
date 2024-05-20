@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Coursework_Java_Game:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3727353f-f293-4055-a249-bb3f5808e635" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Coursework_Java_Game_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coursework_Java_Game.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/events/Events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/Acts/FirstAct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/Characters/Character.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/Characters/PlayerHero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/ConsoleWindowManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/GlobalFlags.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2f6ISPwpMpfwfhqf2B4bpFQ4zy6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ConsoleWindow.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainConsole.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/Coursework_Java_Game/src/Main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/User/IdeaProjects/Coursework_Java_Game/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Coursework_Java_Game\resources\Music" />
+      <recent name="C:\Users\User\IdeaProjects\Coursework_Java_Game\resources" />
+      <recent name="C:\Users\User\IdeaProjects\Coursework_Java_Game\src\Main\resources" />
+      <recent name="C:\Users\User\IdeaProjects\Coursework_Java_Game\src\Main" />
+      <recent name="C:\Users\User\IdeaProjects\Coursework_Java_Game\src\Main\Resources\Events" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MainConsole">
+    <configuration name="ConsoleWindowManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main.ConsoleWindowManager" />
+      <module name="Coursework_Java_Game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Main.Main" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main.Main" />
+      <module name="Coursework_Java_Game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Main.Characters.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainConsole" />
+        <item itemvalue="Application.ConsoleWindowManager" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-ebaef533" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3727353f-f293-4055-a249-bb3f5808e635" name="Changes" comment="" />
+      <created>1713115104027</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713115104027</updated>
+      <workItem from="1713115105133" duration="588000" />
+      <workItem from="1713115707246" duration="10053000" />
+      <workItem from="1713125963806" duration="85000" />
+      <workItem from="1713203474781" duration="1976000" />
+      <workItem from="1713205468257" duration="4127000" />
+      <workItem from="1713288456997" duration="6089000" />
+      <workItem from="1713383394200" duration="3966000" />
+      <workItem from="1713732348460" duration="3602000" />
+      <workItem from="1715516969745" duration="13289000" />
+      <workItem from="1715538018229" duration="775000" />
+      <workItem from="1715544110613" duration="3310000" />
+      <workItem from="1715619595388" duration="2279000" />
+      <workItem from="1716139606787" duration="14409000" />
+      <workItem from="1716228153440" duration="9392000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/Main.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
