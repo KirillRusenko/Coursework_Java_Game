@@ -17,19 +17,21 @@ import java.util.concurrent.TimeUnit;
 // todo ивенты
 // todo предметы
 // todo сохранения
-// todo настройки
 
 public class GameManager extends JFrame {
     private static GameManager instance = null;
 
+    static Settings  settings = Settings.getInstance();
+
     private Clip clip;
+    private String currentClipName;
+
+    private  FloatControl gainControl;
     private JTextArea textArea;
     private Object keyLock = new Object();
     private String[] currentLog = {};
     private KeyEvent lastKeyEvent;
     private int keyCode;
-//    private static final int FRAME_WIDTH = 1024;
-//    private static final int FRAME_HEIGHT = 1024;
 
     public static GameManager getInstance() {
         if (instance == null) {
@@ -53,7 +55,7 @@ public class GameManager extends JFrame {
         textArea = new JTextArea();
         textArea.setBackground(Color.BLACK);
         textArea.setForeground(Color.GREEN);
-        textArea.setFont(new Font("Monospaced", Font.PLAIN, 20));
+        textArea.setFont(new Font("Monospaced", Font.PLAIN, settings.getFontSize()));
         textArea.setEditable(false);
         add(textArea, BorderLayout.CENTER);
 
@@ -161,7 +163,7 @@ public class GameManager extends JFrame {
         // Разделить входную строку по символу "\n" и получить массив строк
         String[] newLines = (KeyEvent.getKeyText(keyCode) + "\n" + text).split("(?<=\n)");
 
-        if (currentLog.length + newLines.length > 14) {
+        if ((currentLog.length + newLines.length) * (settings.getFontSize() / 22) > 20) {
             currentLog = Arrays.copyOfRange(currentLog, newLines.length, currentLog.length);
         }
 
@@ -242,13 +244,41 @@ public class GameManager extends JFrame {
 
     public void openSettings() {
         clearConsole();
-        printTopHUD();
         printStrict(
+            "+----------------------------+\n" +
+                "|         Настройки          |\n" +
                 "+----------------------------+\n" +
-                        "|         Настройки          |\n" +
-                        "+----------------------------+\n"
+                "|  1. Повысить громкость     |\n" +
+                "|  2. Понизить громкость     |\n" +
+                "|  3. Увеличить шрифт        |\n" +
+                "|  4. Уменьшить шрифт        |\n" +
+                "|  5. Сохранить и выйти      |\n" +
+                "+----------------------------+\n" +
+                "|  громкость: " + settings.getVolume() + "/5            |\n" +
+                "|  размер шрифта:  " + settings.getFontSize() + "        |\n" +
+                "+----------------------------+\n"
         );
-        getLastKeyEvent(false, new int[]{});
+        int response = getLastKeyEvent(true, new int[]{KeyEvent.VK_1,KeyEvent.VK_2,KeyEvent.VK_3,KeyEvent.VK_4,KeyEvent.VK_5});
+
+        switch (response) {
+            case KeyEvent.VK_1:
+                setVolumeLevel(1);
+                break;
+            case KeyEvent.VK_2:
+                setVolumeLevel(-1);
+                break;
+            case KeyEvent.VK_3:
+                setFontSize(2);
+                break;
+            case KeyEvent.VK_4:
+                setFontSize(-2);
+                break;
+            case KeyEvent.VK_5:
+                settings.saveSettings();
+                showMainMenu();
+                break;
+        }
+        openSettings();
     }
 
     public void printTopHUD() {
@@ -260,15 +290,20 @@ public class GameManager extends JFrame {
     }
 
     public void playClip(String clipName) {
-        // Проверяем, играет ли в данный момент музыка
-        if (clip != null && clip.isRunning()) {
-            // Если музыка играет, останавливаем её
-            clip.stop();
-            if (!clip.isOpen()) {
-                // Если клип уже закрыт, пропускаем закрытие
-                clip.close();
+
+        // Если клип уже закрыт, пропускаем закрытие
+        if (clip != null && clip.isOpen()) {
+            if (currentClipName == clipName){
+                return;
             }
+            // Проверяем, играет ли в данный момент музыка
+            if (clip.isRunning()) {
+                // Если музыка играет, останавливаем её
+                clip.stop();
+            }
+            clip.close();
         }
+
 
         try {
             InputStream inputStream = getClass().getResourceAsStream("/music/" + clipName);
@@ -281,10 +316,11 @@ public class GameManager extends JFrame {
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(bufferedIn);
             clip = AudioSystem.getClip();
             clip.open(audioStream);
+            currentClipName = clipName;
 
             // Установка громкости на 30%
-            FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
-            gainControl.setValue(-6.0f); // Значение -10.0f соответствует 50% громкости
+            gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+            setVolumeLevel(0); // Значение -6.0f соответствует 50% громкости
 
             clip.start();
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
@@ -297,6 +333,46 @@ public class GameManager extends JFrame {
     public void stopClip() {
         if (clip != null){
             clip.stop();
+        }
+    }
+
+    public void setFontSize(int fontSizeChange) {
+        int newFontSize = settings.getFontSize() + fontSizeChange;
+        textArea.setFont(new Font("Monospaced", Font.PLAIN, newFontSize));
+        settings.setFontSize(newFontSize);
+        }
+
+    public void setVolumeLevel(int volume) {
+        if (clip != null && clip.isOpen()) {
+            int volumeLevel = settings.getVolume() + volume;
+            float volumeDB;
+            switch (volumeLevel) {
+                case 0:
+                    volumeDB = -60.0f; // 0% громкость
+                    break;
+                case 1:
+                    volumeDB = -20.0f; // 10% громкость
+                    break;
+                case 2:
+                    volumeDB = -10.0f; // 31.6% громкость
+                    break;
+                case 3:
+                    volumeDB = -6.0f; // 50% громкость
+                    break;
+                case 4:
+                    volumeDB = -3.0f; // 70.7% громкость
+                    break;
+                case 5:
+                    volumeDB = 0.0f; // 100% громкость
+                    break;
+                default:
+                    volumeDB = gainControl.getValue();
+                    volumeLevel = settings.getVolume();
+
+                    break;
+            }
+            settings.setVolume(volumeLevel);
+            gainControl.setValue(volumeDB);
         }
     }
 

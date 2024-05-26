@@ -9,17 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3727353f-f293-4055-a249-bb3f5808e635" name="Changes" comment="temp">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/apache_commons_lang3.xml" afterDir="false" />
+    <list default="true" id="3727353f-f293-4055-a249-bb3f5808e635" name="Changes" comment="0.5 Somewhat like demo: insanity edition">
+      <change afterPath="$PROJECT_DIR$/resources/settings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coursework_Java_Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Coursework_Java_Game.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Acts/FirstAct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Acts/FirstAct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Characters/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Characters/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Characters/PlayerHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Characters/PlayerHero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/ConsoleWindowManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/GlobalFlags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GlobalFlags.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GameManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +39,16 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="temp" />
+        <option name="rewordedMessage" value="0.5 Somewhat like demo: insanity edition" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="5d2ab7372b7212e25d662b1ac37b7e65dd451b5a" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -79,7 +83,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/User/IdeaProjects/Coursework_Java_Game/src/Main.java",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "configurable.group.appearance",
@@ -88,11 +92,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\Coursework_Java_Game\resources\Music" />
       <recent name="C:\Users\User\IdeaProjects\Coursework_Java_Game\resources" />
+      <recent name="C:\Users\User\IdeaProjects\Coursework_Java_Game\resources\events" />
+      <recent name="C:\Users\User\IdeaProjects\Coursework_Java_Game\resources\Music" />
       <recent name="C:\Users\User\IdeaProjects\Coursework_Java_Game\src\Main\resources" />
       <recent name="C:\Users\User\IdeaProjects\Coursework_Java_Game\src\Main" />
-      <recent name="C:\Users\User\IdeaProjects\Coursework_Java_Game\src\Main\Resources\Events" />
     </key>
   </component>
   <component name="RunManager" selected="Application.GameManager">
@@ -126,7 +130,6 @@
       <list>
         <item itemvalue="Application.GameManager" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.ConsoleWindowManager" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +164,8 @@
       <workItem from="1716228153440" duration="11260000" />
       <workItem from="1716367586854" duration="8000" />
       <workItem from="1716368611837" duration="614000" />
-      <workItem from="1716398030674" duration="13196000" />
+      <workItem from="1716398030674" duration="14051000" />
+      <workItem from="1716753108522" duration="8900000" />
     </task>
     <task id="LOCAL-00001" summary="0.1 Pre demo">
       <option name="closed" value="true" />
@@ -179,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716239451588</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="0.5 Somewhat like demo: insanity edition">
+      <option name="closed" value="true" />
+      <created>1716411484726</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716411484727</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +211,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="0.1 Pre demo" />
     <MESSAGE value="temp" />
-    <option name="LAST_COMMIT_MESSAGE" value="temp" />
+    <MESSAGE value="0.5 Somewhat like demo: insanity edition" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.5 Somewhat like demo: insanity edition" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -221,16 +234,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main/GameManager.java</url>
-          <line>303</line>
+          <line>380</line>
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/GameManager.java</url>
+          <line>302</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/GameManager.java</url>
+          <line>304</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/GameManager.java</url>
+          <line>295</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="mainHero" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
