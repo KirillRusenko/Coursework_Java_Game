@@ -54,8 +54,8 @@ public class PlayerHero extends Character {
         this.intelligence = 10;
         this.charisma = 10;
         this.wisdom = 10;
-
         this.endurance = 10;
+
         this.reputation = 0;
         this.infamy = 0;
 
@@ -259,7 +259,7 @@ public class PlayerHero extends Character {
                      " ╚===========================================╝\n");
 
 
-        int choice = window.getLastKeyEvent(false,new int[]{KeyEvent.VK_1,KeyEvent.VK_2,KeyEvent.VK_3});
+        int choice = window.getLastResponse(false,new int[]{KeyEvent.VK_1,KeyEvent.VK_2,KeyEvent.VK_3});
 
 
         switch (choice) {

@@ -91,39 +91,16 @@ public class GameManager extends JFrame {
         textArea.setText("");
     }
 
-    public int getLastKeyEvent(boolean strict, int[] options) {
-        boolean keyCorrect = false;
-        // ждём пока игрок не нажмёт клавишу
-        synchronized (keyLock) {
-            try {
-                keyLock.wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+    public int getLastResponse(boolean strict, int[] options) {
+        while (true){
+            keyCode = getLastKeyEvent(strict);
 
-        keyCode = lastKeyEvent.getKeyCode();
-        if (!strict) {
-            switch (keyCode) {
-                case KeyEvent.VK_8:
-                    showMainMenu();
-                    break;
-                case KeyEvent.VK_9:
-                    openSettings();
-                    break;
-                case KeyEvent.VK_0:
-                    exitGame();
-                    break;
-            }
-        }
-
-        while (!keyCorrect){
             if (Arrays.stream(options).anyMatch(x -> x == keyCode)) {
-                keyCorrect = true;
                 break;
             }
-            textArea.append("НЕВЕРНЫЙ ВВОД! Попробуйте ещё раз\n");
-            getLastKeyEvent(strict, options);
+            else {
+                textArea.append("НЕВЕРНЫЙ ВВОД! Попробуйте ещё раз\n");
+            }
         }
         return keyCode;
     }
@@ -229,7 +206,7 @@ public class GameManager extends JFrame {
         clearLog();
         FirstAct.startFirstActLoop();
         printStrict("Конец первого акта\n");
-        getLastKeyEvent(false, new int[]{});
+        getLastResponse(false, new int[]{});
     }
 
     public void exitGame() {
@@ -258,7 +235,7 @@ public class GameManager extends JFrame {
                 "|  размер шрифта:  " + settings.getFontSize() + "        |\n" +
                 "+----------------------------+\n"
         );
-        int response = getLastKeyEvent(true, new int[]{KeyEvent.VK_1,KeyEvent.VK_2,KeyEvent.VK_3,KeyEvent.VK_4,KeyEvent.VK_5});
+        int response = getLastResponse(true, new int[]{KeyEvent.VK_1,KeyEvent.VK_2,KeyEvent.VK_3,KeyEvent.VK_4,KeyEvent.VK_5});
 
         switch (response) {
             case KeyEvent.VK_1:

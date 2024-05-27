@@ -7,6 +7,7 @@ public class GlobalFlags {
     public boolean isDebugMode = false;
     public int currentDay = 1;
     public int currentAct = 0;
+    public int eventAmount = 2;
     public String chosenPath = null;
     public boolean hasPath = false;
     public boolean inGame = false;

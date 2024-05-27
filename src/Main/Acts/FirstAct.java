@@ -1,6 +1,7 @@
 package Main.Acts;
 
 import Main.Characters.PlayerHero;
+import Main.Event;
 import Main.GlobalFlags;
 import Main.GameManager;
 import org.apache.commons.lang3.ArrayUtils;
@@ -18,6 +19,7 @@ public class FirstAct {
 
     public static void startFirstActLoop() {
         while (!mainHero.checkDeath()){
+            Event.executeRandomEvent();
             galleyWork();
             if (!GlobalFlags.getInstance().hasPath){
                 if (mainHero.getInfamy() >= 10) {
@@ -95,7 +97,7 @@ public class FirstAct {
                              " ║     чтобы расправится с капитаном самому  ║\n" +
                              " ╚===========================================╝\n");
 
-        int choice = window.getLastKeyEvent(false, new int[]{KeyEvent.VK_1, KeyEvent.VK_2, KeyEvent.VK_3});
+        int choice = window.getLastResponse(false, new int[]{KeyEvent.VK_1, KeyEvent.VK_2, KeyEvent.VK_3});
         Random r = new Random();
         switch (choice) {
             case KeyEvent.VK_1:
@@ -130,7 +132,7 @@ public class FirstAct {
             }
             window.print("Гребите! 1-грести(-запаса сил), 2-не грести(-здоровья) \n" + extra_options);
 
-            int choice = window.getLastKeyEvent(false, choice_options);
+            int choice = window.getLastResponse(false, choice_options);
             switch (choice) {
                 case KeyEvent.VK_1:
                     mainHero.setEnergy(mainHero.getEnergy() - r.nextInt(15) - 5);

@@ -9,11 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3727353f-f293-4055-a249-bb3f5808e635" name="Changes" comment="0.5 Somewhat like demo: insanity edition">
-      <change afterPath="$PROJECT_DIR$/resources/settings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Settings.java" afterDir="false" />
+    <list default="true" id="3727353f-f293-4055-a249-bb3f5808e635" name="Changes" comment="0.6 Settings update?!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/events/Events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/events/events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/settings" beforeDir="false" afterPath="$PROJECT_DIR$/resources/settings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Acts/FirstAct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Acts/FirstAct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Characters/PlayerHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Characters/PlayerHero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/GlobalFlags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GlobalFlags.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +169,10 @@
       <workItem from="1716367586854" duration="8000" />
       <workItem from="1716368611837" duration="614000" />
       <workItem from="1716398030674" duration="14051000" />
-      <workItem from="1716753108522" duration="8900000" />
+      <workItem from="1716753108522" duration="9738000" />
+      <workItem from="1716821780817" duration="1871000" />
+      <workItem from="1716824157076" duration="2411000" />
+      <workItem from="1716838501720" duration="5597000" />
     </task>
     <task id="LOCAL-00001" summary="0.1 Pre demo">
       <option name="closed" value="true" />
@@ -191,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716411484727</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="0.6 Settings update?!">
+      <option name="closed" value="true" />
+      <created>1716763298269</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716763298269</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,45 +227,36 @@
     <MESSAGE value="0.1 Pre demo" />
     <MESSAGE value="temp" />
     <MESSAGE value="0.5 Somewhat like demo: insanity edition" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.5 Somewhat like demo: insanity edition" />
+    <MESSAGE value="0.6 Settings update?!" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.6 Settings update?!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main/Acts/FirstAct.java</url>
-          <line>138</line>
+          <line>140</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main/Acts/FirstAct.java</url>
-          <line>20</line>
+          <line>22</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main/Acts/FirstAct.java</url>
-          <line>41</line>
+          <line>43</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main/GameManager.java</url>
-          <line>380</line>
+          <line>356</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main/GameManager.java</url>
-          <line>302</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main/GameManager.java</url>
-          <line>304</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main/GameManager.java</url>
-          <line>295</line>
-          <option name="timeStamp" value="44" />
+          <url>file://$PROJECT_DIR$/src/Main/Event.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
