@@ -1,6 +1,7 @@
 package Main;
 
 import Main.Acts.FirstAct;
+import Main.Acts.SecondAct;
 import Main.Characters.PlayerHero;
 
 import java.awt.*;
@@ -54,7 +55,7 @@ public class GameManager extends JFrame {
         // Создание текстовой области
         textArea = new JTextArea();
         textArea.setBackground(Color.BLACK);
-        textArea.setForeground(Color.GREEN);
+        textArea.setForeground(settings.getTextColorAsColor());
         textArea.setFont(new Font("Monospaced", Font.PLAIN, settings.getFontSize()));
         textArea.setEditable(false);
         add(textArea, BorderLayout.CENTER);
@@ -205,8 +206,8 @@ public class GameManager extends JFrame {
         PlayerHero.getInstance().createMainHero();
         clearLog();
         FirstAct.startFirstActLoop();
-        printStrict("Конец первого акта\n");
-        getLastResponse(false, new int[]{});
+        SecondAct.startSecondActLoop();
+        showMainMenu();
     }
 
     public void exitGame() {
@@ -229,13 +230,15 @@ public class GameManager extends JFrame {
                 "|  2. Понизить громкость     |\n" +
                 "|  3. Увеличить шрифт        |\n" +
                 "|  4. Уменьшить шрифт        |\n" +
-                "|  5. Сохранить и выйти      |\n" +
+                "|  5. Изменить цвет текста   |\n" +
+                "|  6. Сохранить и выйти      |\n" +
                 "+----------------------------+\n" +
                 "|  громкость: " + settings.getVolume() + "/5            |\n" +
                 "|  размер шрифта:  " + settings.getFontSize() + "        |\n" +
+                "|  цвет текста:  " + settings.getTextColor() + "           |\n" +
                 "+----------------------------+\n"
         );
-        int response = getLastResponse(true, new int[]{KeyEvent.VK_1,KeyEvent.VK_2,KeyEvent.VK_3,KeyEvent.VK_4,KeyEvent.VK_5});
+        int response = getLastResponse(true, new int[]{KeyEvent.VK_1,KeyEvent.VK_2,KeyEvent.VK_3,KeyEvent.VK_4,KeyEvent.VK_5,KeyEvent.VK_6});
 
         switch (response) {
             case KeyEvent.VK_1:
@@ -251,6 +254,9 @@ public class GameManager extends JFrame {
                 setFontSize(-2);
                 break;
             case KeyEvent.VK_5:
+                changeTextColor();
+                break;
+            case KeyEvent.VK_6:
                 settings.saveSettings();
                 showMainMenu();
                 break;
@@ -318,6 +324,37 @@ public class GameManager extends JFrame {
         textArea.setFont(new Font("Monospaced", Font.PLAIN, newFontSize));
         settings.setFontSize(newFontSize);
         }
+
+    public void changeTextColor() {
+        int textColor = settings.getTextColor() + 1;
+        if (textColor > 7){
+            textColor = 1;
+        }
+        settings.setTextColor(textColor);
+        switch (textColor) {
+            case 1:
+                textArea.setForeground(Color.GREEN);;
+                break;
+            case 2:
+                textArea.setForeground(Color.WHITE);;
+                break;
+            case 3:
+                textArea.setForeground(Color.GRAY);
+                break;
+            case 4:
+                textArea.setForeground(Color.RED);
+                break;
+            case 5:
+                textArea.setForeground(Color.BLUE);
+                break;
+            case 6:
+                textArea.setForeground(Color.ORANGE);
+                break;
+            case 7:
+                textArea.setForeground(Color.YELLOW);
+                break;
+        }
+    }
 
     public void setVolumeLevel(int volume) {
         if (clip != null && clip.isOpen()) {

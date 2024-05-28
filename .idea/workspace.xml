@@ -9,15 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3727353f-f293-4055-a249-bb3f5808e635" name="Changes" comment="0.6 Settings update?!">
+    <list default="true" id="3727353f-f293-4055-a249-bb3f5808e635" name="Changes" comment="0.8 Event: Bear attack?">
+      <change afterPath="$PROJECT_DIR$/src/Main/Acts/SecondAct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/events/Events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/events/events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/events/events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/events/events.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/settings" beforeDir="false" afterPath="$PROJECT_DIR$/resources/settings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Acts/FirstAct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Acts/FirstAct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Characters/PlayerHero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Characters/PlayerHero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/GlobalFlags.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GlobalFlags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Settings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +67,7 @@
   "keyToString": {
     "Application.ConsoleWindow.executor": "Run",
     "Application.ConsoleWindowManager.executor": "Run",
-    "Application.GameManager.executor": "Run",
+    "Application.GameManager.executor": "Debug",
     "Application.Main.executor": "Run",
     "Application.MainConsole.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
@@ -172,7 +172,9 @@
       <workItem from="1716753108522" duration="9738000" />
       <workItem from="1716821780817" duration="1871000" />
       <workItem from="1716824157076" duration="2411000" />
-      <workItem from="1716838501720" duration="5597000" />
+      <workItem from="1716838501720" duration="6623000" />
+      <workItem from="1716908942496" duration="896000" />
+      <workItem from="1716928301055" duration="4568000" />
     </task>
     <task id="LOCAL-00001" summary="0.1 Pre demo">
       <option name="closed" value="true" />
@@ -206,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716763298269</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="0.8 Event: Bear attack?">
+      <option name="closed" value="true" />
+      <created>1716844280781</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716844280781</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,14 +238,15 @@
     <MESSAGE value="temp" />
     <MESSAGE value="0.5 Somewhat like demo: insanity edition" />
     <MESSAGE value="0.6 Settings update?!" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.6 Settings update?!" />
+    <MESSAGE value="0.8 Event: Bear attack?" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.8 Event: Bear attack?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main/Acts/FirstAct.java</url>
-          <line>140</line>
+          <line>143</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -250,13 +261,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main/GameManager.java</url>
-          <line>356</line>
+          <line>393</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main/Event.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="55" />
+          <url>file://$PROJECT_DIR$/src/Main/GameManager.java</url>
+          <line>333</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/Settings.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

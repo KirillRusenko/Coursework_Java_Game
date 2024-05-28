@@ -18,8 +18,8 @@ public class FirstAct {
     static PlayerHero  mainHero = PlayerHero.getInstance();
 
     public static void startFirstActLoop() {
+        window.clearLog();
         while (!mainHero.checkDeath()){
-            Event.executeRandomEvent();
             galleyWork();
             if (!GlobalFlags.getInstance().hasPath){
                 if (mainHero.getInfamy() >= 10) {
@@ -37,7 +37,7 @@ public class FirstAct {
                     window.showMainMenu();
                 }
             }
-            if (FirstAct.mutiny_progress == 10) {
+            if (FirstAct.mutiny_progress >= 7) {
                 actEnd();
                 return;
             }
@@ -117,6 +117,9 @@ public class FirstAct {
                 mainHero.setHealth(mainHero.getHealth() - r.nextInt(40 - mainHero.getIntelligence()));
                 break;
         }
+        GlobalFlags.getInstance().currentAct++;
+        window.printStrict("Конец первого акта\n" +
+                                "Нажмите любую клавишу чтобы начать следующий акт\n");
 
     }
 
@@ -155,9 +158,9 @@ public class FirstAct {
                         mainHero.setHealth(mainHero.getHealth() - r.nextInt(7) - 5);
                         mainHero.setEnergy(mainHero.getEnergy() - r.nextInt(7) - 5);
                         FirstAct.mutiny_progress++;
-                        window.print("Подготовка к бунту= " + FirstAct.mutiny_progress + "/10\n" +
+                        window.print("Подготовка к бунту= " + FirstAct.mutiny_progress + "/7\n" +
                                      "Ваш запас сил= " + mainHero.getEnergy() + ". Ваше здоровье = " + mainHero.getHealth() + "\n");
-                        if (FirstAct.mutiny_progress >= 10) {
+                        if (FirstAct.mutiny_progress >= 7) {
                             window.print("Всё готово, дождитесь ночи и вы вместе с остальными рабами устроите бунт\n");
                             return;
                         }

@@ -97,8 +97,12 @@ public class Event {
 
 
     public static void executeEvent(int eventId) {
+        window.clearLog();
         Object eventObj = getEventByID(eventId);
         Event event = parseEvent(eventObj);
+        window.printStrict("+----------------------------+\n" +
+                                "|       Случайное событие    |\n" +
+                                "+----------------------------+\n" );
         window.print(event.title + "\n" );
         window.printStrict(event.description + "\n");
         int[] choice_options = new int[]{};
